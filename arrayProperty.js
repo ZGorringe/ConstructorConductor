@@ -2,4 +2,13 @@
 
 //Add a reverse method to the String 'class' so that every instance of String can call reverse and reverse itself.
   
-  //code here
+var StringClass = function(name){
+	this.name = name;
+}
+
+var zac = new StringClass('Zac')
+var zachary = new StringClass('Zachary')
+
+StringClass.prototype.reverse = function(){
+	console.log(this.name.split("").reverse().join(""));
+}
